@@ -1,0 +1,75 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes jiggle {
+  0% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #60c1b6;
+}
+
+.keyboard-container {
+  padding: 30px 28px;
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  background: #f7f7f7;
+  border-radius: 40px;
+}
+
+.key {
+  min-width: 65px;
+  margin: 6px;
+  padding: 18px 24px;
+
+  text-transform: uppercase;
+  text-align: center;
+
+  background: #ffffff;
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+}
+
+.key.func {
+  padding: 18px 30px;
+  color: #868888;
+}
+
+.key.enter {
+  padding: 18px 21px;
+  color: #868888;
+}
+
+.key.shift {
+  padding: 18px 45px;
+  color: #868888;
+}
+
+.jiggle {
+  color: #ffffff !important;
+  background: #60c1b6;
+  animation: jiggle 0.5s infinite alternate-reverse;
+}
